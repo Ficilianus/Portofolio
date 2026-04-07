@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brian Willyandri Siregar</title>
+  <meta name="description" content="Portfolio of Brian Willyandri Siregar, The Programmer" />
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- AOS – Animate On Scroll -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <!-- Tailwind CSS (Play CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { poppins: ['Poppins', 'sans-serif'] }
+        }
+      }
+    };
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="font-poppins">
+
+  <!-- ╔══════════════════════════════════════════════════╗
+     ║  NAVIGATION BAR                                  ║
+     ╚══════════════════════════════════════════════════╝ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+
+      <!-- Logo -->
+      <a href="#hero" class="nav-logo">Ficili<span class="accent-dot">.</span></a>
+
+      <!-- Desktop Links -->
+      <ul class="nav-links">
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+      </ul>
+
+      <!-- Actions: theme toggle + hamburger -->
+      <div class="nav-actions">
+        <button id="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-moon" id="theme-icon"></i>
+        </button>
+        <button id="hamburger" aria-label="Open menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu">
+      <a href="#hero">Home</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#certificates">Certificates</a>
+    </div>
+  </nav>
+
+
+  <!-- ╔══════════════════════════════════════════════════╗
+       ║  HERO SECTION                                    ║
+       ╚══════════════════════════════════════════════════╝ -->
+  <section id="hero">
+    <div class="section-wrapper">
+      <div class="hero-grid">
+
+        <!-- ── Left: Text ── -->
+        <div data-aos="fade-right" data-aos-delay="100">
+          <div class="hero-badge">
+            <span></span>
+            Available for work
+          </div>
+
+          <h1 class="hero-name">
+            Hi, I'm<br />
+            <span class="highlight">Brian Willyandri Siregar</span>
+          </h1>
+
+          <p class="hero-role">
+            <i class="fa-solid fa-terminal" style="font-size:0.85em;"></i>
+            &thinsp;<span id="typed-role">Programmer </span><span style="color:var(--accent);"
+              class="animate-pulse">|</span>
+          </p>
+
+          <p class="hero-desc">
+            As a final-year Informatics student at Sanata Dharma University specializing in Machine Learning, I have a
+            strong interest in intelligent systems and data-driven development. I have hands-on experience in developing
+            web applications using Laravel and building simple embedded/IoT projects, including a Raspberry Pi-based
+            smart parking prototype. I possess a solid foundation in programming, database management, and
+            hardware–software integration, and I am highly motivated to continuously learn and grow in the field of
+            technology and machine learning.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#projects" class="btn-primary">
+              <i class="fa-solid fa-rocket"></i> View Projects
+            </a>
+            <a href="#footer" class="btn-secondary">
+              <i class="fa-solid fa-envelope"></i> Contact Me
+            </a>
+          </div>
+
+          <!-- <div class="hero-stats">
+            <div class="stat-item">
+              <h3>3+</h3>
+              <p>Years of<br />Experience</p>
+            </div>
+            <div class="stat-item">
+              <h3>20+</h3>
+              <p>Projects<br />Completed</p>
+            </div>
+            <div class="stat-item">
+              <h3>15+</h3>
+              <p>Happy<br />Clients</p>
+            </div>
+          </div> -->
+        </div>
+
+        <!-- ── Right: Photo ── -->
+        <div class="hero-photo-side" data-aos="fade-left" data-aos-delay="200">
+          <div class="photo-card">
+            <!-- Decorative floating tech badges -->
+            <!-- <div class="tech-badge" style="top:-16px;left:-30px;">
+            <i class="fa-brands fa-react"></i> React
+          </div>
+          <div class="tech-badge" style="bottom:60px;left:-40px;animation-delay:1.5s;">
+            <i class="fa-brands fa-node-js"></i> Node.js
+          </div>
+          <div class="tech-badge" style="top:40px;right:-50px;animation-delay:0.8s;">
+            <i class="fa-brands fa-figma"></i> Figma
+          </div> -->
+
+            <!-- Frame decoration -->
+            <div class="photo-frame"></div>
+
+            <!-- Photo container -->
+            <div class="photo-inner">
+              <img id="photo-1" src="assets/brian1.png" alt="Brian W Siregar – 1" class="profile-photo" />
+              <img id="photo-2" src="assets/brian2.png" alt="Brian W Siregar – 2" class="profile-photo hidden-photo" />
+            </div>
+
+            <!-- Flip button -->
+            <button class="photo-flip-btn" id="photo-flip-btn" title="Swap Photo">
+              <i class="fa-solid fa-rotate"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ╔══════════════════════════════════════════════════╗
+     ║  SKILLS SECTION                                  ║
+     ╚══════════════════════════════════════════════════╝ -->
+  <section id="skills">
+    <div class="section-wrapper">
+      <div data-aos="fade-up">
+        <h2 class="section-title">Tech Stack<span class="accent-dot">.</span></h2>
+        <p class="section-subtitle">Technologies and tools I work with on a daily basis</p>
+      </div>
+
+      <div class="skills-grid">
+
+        <!-- Machine Learning -->
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <i class="fa-solid fa-palette"></i>
+            </div>
+            <span class="skill-cat-title">Machine Learning</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">TensorFlow</span>
+            <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">Scikit-Learn</span>
+            <span class="skill-tag">LSTM</span>
+            <span class="skill-tag">Transformers</span>
+            <span class="skill-tag">NumPy</span>
+            <span class="skill-tag">Pandas</span>
+          </div>
+        </div>
+
+        <!-- Computer Vision -->
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <i class="fa-solid fa-server"></i>
+            </div>
+            <span class="skill-cat-title">Computer Vision</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">OpenCV</span>
+            <span class="skill-tag">CNN (Convolutional Neural Networks)</span>
+            <span class="skill-tag">MediaPipe</span>
+            <span class="skill-tag">Image Processing</span>
+            <span class="skill-tag">Object Detection</span>
+            <span class="skill-tag">Gesture Recognition</span>
+          </div>
+        </div>
+        <!-- Game Development -->
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <i class="fa-solid fa-server"></i>
+            </div>
+            <span class="skill-cat-title">Game Development</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Unity Engine</span>
+            <span class="skill-tag">C#</span>
+            <span class="skill-tag">Unity 2D</span>
+            <span class="skill-tag">Game Physics</span>
+            <span class="skill-tag">Unity UI</span>
+            <span class="skill-tag">C# Scripting</span>
+          </div>
+        </div>
+        <!-- Robotics & Embedded -->
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <i class="fa-solid fa-server"></i>
+            </div>
+            <span class="skill-cat-title">Robotics & Embedded</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">Raspberry Pi</span>
+            <span class="skill-tag">Arduino</span>
+            <span class="skill-tag">ESP32</span>
+            <span class="skill-tag">Robotics Kinematics</span>
+            <span class="skill-tag">IoT</span>
+          </div>
+        </div>
+
+        <!-- Tools & Ecosystem -->
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">
+              <i class="fa-solid fa-wrench"></i>
+            </div>
+            <span class="skill-cat-title">Tools & Ecosystem</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Git / GitHub</span>
+            <span class="skill-tag">Figma</span>
+            <span class="skill-tag">Draw.io</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ╔══════════════════════════════════════════════════╗
+     ║  EXPERIENCE SECTION                              ║
+     ╚══════════════════════════════════════════════════╝ -->
+  <section id="experience">
+    <div class="section-wrapper">
+      <div data-aos="fade-up">
+        <h2 class="section-title">Experience<span class="accent-dot">.</span></h2>
+        <p class="section-subtitle">My professional journey so far</p>
+      </div>
+
+      <div class="experience-timeline">
+
+        <!-- Item 1 -->
+        <div class="exp-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="exp-dot-col">
+            <div class="exp-dot"><i class="fa-solid fa-briefcase"></i></div>
+          </div>
+          <div class="exp-card">
+            <div class="exp-header">
+              <span class="exp-company">PT. RADIO SWARA MAHASISWA SANATA DHARMA</span>
+              <span class="exp-period">February 2023-February 2025</span>
+            </div>
+            <p class="exp-role">Technical Division Coordinator</p>
+            <ul class="exp-desc">
+              <li>Responsible for overseeing hardware maintenance operations, managing technical equipment and
+                inventory, </li>
+              <li>and coordinating team communication to ensure efficient and reliable technical support.</li>
+              <li>Key Responsibilities :</li>
+              <li> => Managed hardware maintenance and troubleshooting activities.</li>
+              <li> => Oversaw equipment management, inventory, and operational readiness.</li>
+              <li> => Coordinated team communication to ensure efficient workflow and task completion.</li>
+              <!-- <li>Mentored 2 junior developers and established frontend coding standards for the team.</li> -->
+            </ul>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <!-- <div class="exp-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="exp-dot-col">
+            <div class="exp-dot"><i class="fa-solid fa-code"></i></div>
+          </div>
+          <div class="exp-card">
+            <div class="exp-header">
+              <span class="exp-company">Nexora Digital</span>
+              <span class="exp-period">Jun 2023 – Dec 2023</span>
+            </div>
+            <p class="exp-role">Full-Stack Developer</p>
+            <ul class="exp-desc">
+              <li>Built and maintained REST APIs serving 10k+ daily active users using Node.js & Express.</li>
+              <li>Implemented secure authentication systems with JWT and OAuth 2.0 integration.</li>
+              <li>Migrated a monolithic app to microservices, reducing deployment time by 60%.</li>
+            </ul>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ╔══════════════════════════════════════════════════╗
+     ║  PROJECTS SECTION                                ║
+     ╚══════════════════════════════════════════════════╝ -->
+  <section id="projects">
+    <div class="section-wrapper">
+      <div class="scroll-section-header" data-scroll-section="projects-scroll" data-aos="fade-up">
+        <div>
+          <h2 class="section-title">Projects<span class="accent-dot">.</span></h2>
+          <p class="section-subtitle" style="margin-bottom:0;">A selection of work I'm proud of</p>
+        </div>
+        <div class="scroll-nav">
+          <button class="scroll-btn" data-scroll-prev aria-label="Scroll left">
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <button class="scroll-btn" data-scroll-next aria-label="Scroll right">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Scroll Container -->
+      <div class="cards-scroll-container" id="projects-scroll" data-aos="fade-up" data-aos-delay="150">
+
+        <!-- ─ Project 1: Automated Parking System ─ -->
+        <div class="project-card">
+          <div class="card-slider">
+            <div class="slider-track">
+              <div class="slider-slide">
+                <img src="assets/images/projects/rashpeberry1.jpeg" alt="ShopSphere – Home" />
+              </div>
+              <div class="slider-slide">
+                <img src="assets/images/projects/rashpeberry2.jpeg" alt="ShopSphere – Dashboard" />
+              </div>
+            </div>
+            <button class="slider-arrow prev"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="slider-arrow next"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="slider-dots">
+              <span class="slider-dot active"></span>
+              <span class="slider-dot"></span>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-tags">
+              <span class="card-tag">Raspberry Pi Programming</span>
+              <span class="card-tag">Hardware & Sensor Integration</span>
+              <span class="card-tag">Automation System Development</span>
+            </div>
+            <h3 class="card-title">Automated Parking System</h3>
+            <p class="card-desc">
+              Developed a prototype of an automated parking system using Raspberry Pi and a servo motor to simulate an
+              intelligent parking gate. The system detects vehicle presence and automatically controls gate access,
+              demonstrating the implementation of embedded systems, hardware integration, and basic automation concepts.
+            </p>
+            <div class="card-footer">
+              <a href="#" class="card-link">
+                <i class="fa-brands fa-github"></i> Source
+              </a>
+              <a href="https://youtu.be/uxpMoRtkHdA" class="card-link">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ─ Project 2: Population Census Web Application ─ -->
+        <div class="project-card">
+          <div class="card-slider">
+            <div class="slider-track">
+              <div class="slider-slide">
+                <img src="assets/images/projects/KKN.png" alt="TaskFlow – Board" />
+              </div>
+            </div>
+            <button class="slider-arrow prev"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="slider-arrow next"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="slider-dots">
+              <span class="slider-dot active"></span>
+              <span class="slider-dot"></span>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-tags">
+              <span class="card-tag">Laravel </span>
+              <span class="card-tag">CRUD & Data Validation</span>
+            </div>
+            <h3 class="card-title">Population Census Web Application</h3>
+            <p class="card-desc">
+              Developed a web-based population census system using Laravel to manage resident data efficiently. The
+              application allows users to input citizen information, upload official documents (Family Card, ID Card,
+              and Birth Certificate), and view structured population records through an organized dashboard.
+            </p>
+            <div class="card-footer">
+              <a href="#" class="card-link">
+                <i class="fa-brands fa-github"></i> Private Access
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ─ Project 3: Ami Catering ─ -->
+        <div class="project-card">
+          <div class="card-slider">
+            <div class="slider-track">
+              <div class="slider-slide">
+                <img src="assets/images/projects/AmiCatering1.png" alt="DataPulse – Dashboard" />
+              </div>
+              <div class="slider-slide">
+                <img src="assets/images/projects/AmiCatering2.png" alt="DataPulse – Reports" />
+              </div>
+            </div>
+            <button class="slider-arrow prev"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="slider-arrow next"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="slider-dots">
+              <span class="slider-dot active"></span>
+              <span class="slider-dot"></span>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-tags">
+              <span class="card-tag">User-Friendly Dashboard</span>
+              <span class="card-tag">CRUD</span>
+              <span class="card-tag">Laravel</span>
+            </div>
+            <h3 class="card-title">Ami Catering</h3>
+            <p class="card-desc">
+              Ami Catering is a dedicated web application designed to streamline the interaction between catering
+              providers and customers. The platform features a robust user authentication system, allowing clients to
+              create accounts and conveniently schedule meal orders across multiple days. On the administrative side,
+              the owner can manage the digital menu by listing available food items and monitoring order statuses in
+              real-time to ensure seamless delivery and customer satisfaction.
+            </p>
+            <div class="card-footer">
+              <a href="https://github.com/Gdankz/Ami-Catering.git" class="card-link">
+                <i class="fa-brands fa-github"></i> Source
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- ─ Project 4: Coming Soon ─ -->
+        <div class="project-card">
+          <div class="card-slider">
+            <div class="slider-track">
+              <div class="slider-slide">
+                <img src="assets/images/projects/Coming Soon 1.png" alt="DevFolio – Builder" />
+              </div>
+              <div class="slider-slide">
+                <img src="assets/images/projects/Coming Soon 2.png" alt="DevFolio – Preview" />
+              </div>
+            </div>
+            <button class="slider-arrow prev"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="slider-arrow next"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="slider-dots">
+              <span class="slider-dot active"></span>
+              <span class="slider-dot"></span>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-tags">
+              <span class="card-tag">-</span>
+              <span class="card-tag">-</span>
+              <span class="card-tag">-</span>
+            </div>
+            <h3 class="card-title">Coming Soon</h3>
+            <p class="card-desc">
+              ####
+            </p>
+            <div class="card-footer">
+              <!-- <a href="#" class="card-link">
+                <i class="fa-brands fa-github"></i> Source
+              </a>
+              <a href="#" class="card-link">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+              </a> -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ╔══════════════════════════════════════════════════╗
+     ║  CERTIFICATES SECTION                            ║
+     ╚══════════════════════════════════════════════════╝ -->
+  <section id="certificates">
+    <div class="section-wrapper">
+      <div class="scroll-section-header" data-scroll-section="certs-scroll" data-aos="fade-up">
+        <div>
+          <h2 class="section-title">Certificates<span class="accent-dot">.</span></h2>
+          <p class="section-subtitle" style="margin-bottom:0;">Credentials & professional certifications</p>
+        </div>
+        <div class="scroll-nav">
+          <button class="scroll-btn" data-scroll-prev aria-label="Scroll left">
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <button class="scroll-btn" data-scroll-next aria-label="Scroll right">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Scroll Container -->
+      <div class="cards-scroll-container" id="certs-scroll" data-aos="fade-up" data-aos-delay="150">
+
+        <!-- ─ Cert 1: Masdha1 ─ -->
+        <div class="cert-card">
+          <div class="cert-img-wrap">
+            <img src="assets/images/certs/Masdha1.png" alt="Masdha1" />
+          </div>
+          <div class="cert-content">
+            <p class="cert-issuer">Masdha</p>
+            <h3 class="cert-title">Technical Division Coordinator 2023-2024</h3>
+            <div class="cert-meta">
+              <span><i class="fa-regular fa-calendar" style="margin-right:4px;"></i>2024</span>
+              <span class="cert-badge">
+                <i class="fa-solid fa-check-circle"></i> Verified
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ─ Cert 2: Masadha 2 ─ -->
+        <div class="cert-card">
+          <div class="cert-img-wrap">
+            <img src="assets/images/certs/Masdha2.png" alt="Masdha2" />
+          </div>
+          <div class="cert-content">
+            <p class="cert-issuer">Masdha</p>
+            <h3 class="cert-title">Technical Division Coordinator 2024-2025</h3>
+            <div class="cert-meta">
+              <span><i class="fa-regular fa-calendar" style="margin-right:4px;"></i>2025</span>
+              <span class="cert-badge">
+                <i class="fa-solid fa-check-circle"></i> Verified
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ─ Cert 3: Coming soon ─ -->
+        <div class="cert-card">
+          <div class="cert-img-wrap">
+            <img src="assets/images/projects/Coming Soon 1.png" alt="Coming Soon" />
+          </div>
+          <div class="cert-content">
+            <p class="cert-issuer">Coming Soon</p>
+            <h3 class="cert-title">Coming Soon</h3>
+            <div class="cert-meta">
+              <span><i class="fa-regular fa-calendar" style="margin-right:4px;"></i>2026</span>
+              <span class="cert-badge">
+                <i class="fa-solid fa-check-circle"></i> Verified
+              </span>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ╔══════════════════════════════════════════════════╗
+     ║  FOOTER                                          ║
+     ╚══════════════════════════════════════════════════╝ -->
+  <footer id="footer">
+    <div class="section-wrapper">
+      <div class="footer-inner">
+
+        <!-- Brand / tagline -->
+        <div class="footer-brand" data-aos="fade-up">
+          <p class="footer-logo">Brian W Siregar<span class="accent-dot">.</span></p>
+          <p class="footer-tagline">
+            give me coffee then i'm ready
+          </p>
+          <a href="mailto:[EMAIL_ADDRESS]" class="footer-email">
+            <i class="fa-solid fa-envelope"></i>
+            [briansiregar09@gmail.com]
+          </a>
+        </div>
+
+        <!-- Social links -->
+        <div class="footer-socials" data-aos="fade-up" data-aos-delay="100">
+          <h4>Follow Me</h4>
+          <div class="social-links">
+            <a href="https://github.com/Ficilianus" target="_blank" class="social-link" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/brian-siregar-7b39812a6?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+              target="_blank" class="social-link" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.instagram.com/fclns_brianziregar?igsh=YTRqaWVuazJ0YW5i/" target="_blank"
+              class="social-link" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <!-- <a href="https://twitter.com/" target="_blank" class="social-link" aria-label="Twitter/X">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://dribbble.com/" target="_blank" class="social-link" aria-label="Dribbble">
+              <i class="fa-brands fa-dribbble"></i>
+            </a> -->
+          </div>
+        </div>
+      </div>
+      <!-- Bottom bar -->
+      <div class="footer-bottom" data-aos="fade-up">
+        <span>© 2026 Brian W Siregar. All rights reserved.</span>
+        <span>Crafted with ☕</span>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ── Scripts ── -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
